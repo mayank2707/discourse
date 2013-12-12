@@ -43,6 +43,16 @@ role :web, '23.96.16.34', primary: true
 set :application, 'discourse'
 set :deploy_to, "/var/www/#{application}"
 
+#sidekiq
+
+set :sidekiq_cmd, "#{bundle_cmd} exec sidekiq"
+set :sidekiqctl_cmd, "#{bundle_cmd} exec sidekiqctl"
+set :sidekiq_timeout, 10
+set :sidekiq_role, :app
+set :sidekiq_pid, "#{current_path}/tmp/pids/sidekiq.pid"
+set :sidekiq_processes, 1
+set :sidekiq_role, :sidekiq
+role :sidekiq, '23.96.16.34'
 # Perform an initial bundle
 after "deploy:setup" do
   run "cd #{current_path} && bundle install"
