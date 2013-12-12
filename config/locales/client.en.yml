@@ -162,7 +162,7 @@ en:
 
       user_mentioned_user: "<a href='{{user1Url}}'>{{user}}</a> mentioned <a href='{{user2Url}}'>{{another_user}}</a>"
       user_mentioned_you: "<a href='{{user1Url}}'>{{user}}</a> mentioned <a href='{{user2Url}}'>you</a>"
-      you_mentioned_user: "<a href='{{user1Url}}'>You</a> mentioned <a href='{{user2Url}}'>{{user}}</a>"
+      you_mentioned_user: "<a href='{{user1Url}}'>You</a> mentioned <a href='{{user2Url}}'>{{another_user}}</a>"
 
       posted_by_user: "Posted by <a href='{{userUrl}}'>{{user}}</a>"
       posted_by_you: "Posted by <a href='{{userUrl}}'>you</a>"
@@ -528,15 +528,15 @@ en:
       none: "You have no notifications right now."
       more: "view older notifications"
       mentioned: "<span title='mentioned' class='icon'>@</span> {{username}} {{link}}"
-      quoted: "<i title='quoted' class='icon icon-quote-right'></i> {{username}} {{link}}"
-      replied: "<i title='replied' class='icon icon-reply'></i> {{username}} {{link}}"
-      posted: "<i title='replied' class='icon icon-reply'></i> {{username}} {{link}}"
-      edited: "<i title='edited' class='icon icon-pencil'></i> {{username}} {{link}}"
-      liked: "<i title='liked' class='icon icon-heart'></i> {{username}} {{link}}"
-      private_message: "<i class='icon icon-envelope-alt' title='private message'></i> {{username}} {{link}}"
-      invited_to_private_message: "<i class='icon icon-envelope-alt' title='private message'></i> {{username}} {{link}}"
-      invitee_accepted: "<i title='accepted your invitation' class='icon icon-signin'></i> {{username}} accepted your invitation"
-      moved_post: "<i title='moved post' class='icon icon-arrow-right'></i> {{username}} moved {{link}}"
+      quoted: "<i title='quoted' class='fa fa-quote-right'></i> {{username}} {{link}}"
+      replied: "<i title='replied' class='fa fa-reply'></i> {{username}} {{link}}"
+      posted: "<i title='replied' class='fa fa-reply'></i> {{username}} {{link}}"
+      edited: "<i title='edited' class='fa fa-pencil'></i> {{username}} {{link}}"
+      liked: "<i title='liked' class='fa fa-heart'></i> {{username}} {{link}}"
+      private_message: "<i class='fa fa-envelope-o' title='private message'></i> {{username}} {{link}}"
+      invited_to_private_message: "<i class='fa fa-envelope-o' title='private message'></i> {{username}} {{link}}"
+      invitee_accepted: "<i title='accepted your invitation' class='fa fa-sign-in'></i> {{username}} accepted your invitation"
+      moved_post: "<i title='moved post' class='fa fa-arrow-right'></i> {{username}} moved {{link}}"
       total_flagged: "total flagged posts"
 
     upload_selector:
@@ -945,6 +945,26 @@ en:
         confirm:
           one: "Are you sure you want to delete that post?"
           other: "Are you sure you want to delete all those posts?"
+
+      revisions:
+        controls:
+          first: "First revision"
+          previous: "Previous revision"
+          next: "Next revision"
+          last: "Last revision"
+          comparing_previous_to_current_out_of_total: "<strong>#{{previous}}</strong> vs. <strong>#{{current}}</strong> (out of {{total}})"
+        displays:
+          inline:
+            title: "Show the rendered output with additions and removals inline"
+            button: '<i class="fa fa-square-o"></i> HTML'
+          side_by_side:
+            title: "Show the rendered output diffs side-by-side"
+            button: '<i class="fa fa-columns"></i> HTML'
+          side_by_side_markdown:
+            title: "Show the markdown source diffs side-by-side"
+            button: '<i class="fa fa-columns"></i> Markdown'
+        details:
+          edited_by: "Edited by"
 
     category:
       can: 'can&hellip; '
